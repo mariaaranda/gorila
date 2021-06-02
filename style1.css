@@ -1,0 +1,1010 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+body {
+    padding-left: 7%;
+}
+li {
+    list-style: none;
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    color: var(--amarillo);
+    font-size: 100px;
+    letter-spacing: -8px;
+    font-weight: 900;
+    line-height: 125px;
+}
+h2 {
+    color: black;
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+footer {
+    background-color: black;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 150px;
+}
+form {
+    flex-wrap: wrap;
+}
+input, select {
+    width: 23%;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border: 4px solid var(--amarillo);
+    background-color: black;
+    transition: 0.5s;
+    outline: none;
+    color: white; 
+    font-size: 24px;
+    font-weight: 700;
+}
+input {
+    justify-content: center;
+}
+select {
+   justify-content: flex-start;
+}
+option {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+input:hover, select:hover {
+    border: 4px solid var(--magenta)
+}
+textarea {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border: 4px solid var(--amarillo);
+    background-color: black;
+    width: 100%;
+    height: 30%;
+    outline: none;
+}
+textarea ::placeholder {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+textarea:hover {
+    border: 4px solid var(--magenta)
+}
+
+:root {
+    --magenta: #961556;
+    --amarillo: #e5d308;
+    --amarilloclaro: #dca932;
+    --magentaclaro: #b38b9f70;
+    --gris: #9595955c;
+}
+.flex {
+    display: flex;
+}
+.jcenter {
+    justify-content: center;
+}
+.jend {
+    justify-content: flex-end;
+}
+.acenter {
+    align-items: center;
+}
+.jbetween {
+    justify-content: space-between;
+}
+.aend {
+    align-items: flex-end;
+}
+.wrapper {
+    max-width: 80%;
+    margin: auto;
+}
+/* NAVEGADOR */
+.menuresponsive {
+    display: none;
+}
+.menufijo {
+    width: 8%;
+    background-color: black;
+    padding: 10px 10px;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+}
+.navbar {
+    flex-direction: column;
+    height: 100%;
+}
+.navbar ul {
+    width: 100%;
+    flex-direction: column;
+}
+.navbar ul:first-child {
+    margin-bottom: 50px;
+}
+ul li img {
+    width: 70%;
+    transform: rotate(90deg);
+}
+.navbar li:not(:last-child) {
+    margin-bottom: 150px;
+}
+.navbar ul li {
+    transition: 1s;
+    transform: rotate(-90deg);    
+}
+.navbar li a {
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    display: block;
+    min-width: 170px;
+    text-transform: lowercase;
+}
+.navbar li a:hover {
+    color: var(--amarillo);
+    font-style: italic;
+}
+button.hamburger {
+    background-color: var(--amarillo);
+    width: 100%;
+    height: 10vh;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+}
+.hamburger i {
+    font-size: 40px;
+}
+.hamburger:hover {
+    background-color: var(--magenta);
+}
+/* FIN NAVEGADOR */
+/* MENU LATERAL */
+.menulateral {
+    background-color: var(--magenta);
+    width: 93%;
+    height: 100vh;
+    z-index: 2000;
+    top: 0;
+    padding: 25px 40px;
+    position: fixed;
+    display: none;
+    transition: 1s;
+    border: 3px solid black;
+}
+.posicion {
+    display: block;
+    animation: posicion;
+    animation-duration: 1s;
+}
+@keyframes posicion {
+    from {
+        transform: translateX(-1500px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.menulateral > div {
+    height: 100%;
+}
+.menulateral ul a {
+    padding: 20px 20px;
+    color: black;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: -7px;
+    text-transform: lowercase;
+    line-height: 92px;
+}
+.menulateral a:hover {
+    color: var(--amarillo);
+    font-style: italic;
+}
+.menulateral li:not(:last-child) {
+    margin-bottom: 20px;
+}
+.redes {
+    flex-direction: column;
+}
+.redes i {
+    font-size: 44px;
+    color: black;
+    margin-bottom: 50px;
+}
+.redes i:hover {
+    color:var(--amarillo);
+}
+.redes .btn {
+    width: 56%;
+    background-color: black;
+}
+.redes .btn a {
+    color: white;
+}
+.redes .btn a:hover {
+    color: var(--amarillo);
+}
+/* FIN MENU LATERAL */
+/* CLASES GENERALES */
+.margenes {
+    margin-bottom: 250px;
+}
+.cabecera video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;    
+}
+.cabeceratexto .letras {
+    z-index: 0;
+    /* animation-duration: 3s; */
+    padding-top: 20px;
+    position: relative;  
+}
+.letras img:nth-child(2) {
+    position: absolute;
+    top: -17px;
+    left: -23px;
+    display: none;
+}
+.letras:hover img:nth-child(2) {
+    display: block;
+}
+.btn {
+    border: 3px solid black;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: inline-flex;
+    width: 40%;
+    justify-content: center;
+}
+.btn a {
+    color: black;
+    font-weight: 900;
+    text-align: center;
+}
+.cabeceratexto .btn {
+    background-color: var(--amarillo);    
+}
+/* SOMOS */
+.somos {
+    position: relative;
+}
+.iconos {
+    position: relative;
+    bottom: -44px;
+    margin-top: 100px;
+}
+.iconos .caja i {
+    font-size: 110px;
+    cursor: pointer;
+}
+.iconos .caja i:not(:last-child) {
+    margin-right: 30px;
+}
+.iconos i:hover {
+    color:var(--magenta);
+}
+.infosomos {    
+    width: 100%;
+    position: relative;
+}
+.infosomos p, .brand div p {
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.infosomos h1 {
+    font-size: 100px;
+    letter-spacing: -8px;
+    position: relative;
+    z-index: -10;
+    top: 58px;
+    left: -3px;
+}
+.infosomos h1:hover {
+    color: var(--magenta);
+}
+.cajasomos {
+    position: absolute;
+    top: 0;
+}
+.textosomos {
+    display: none;
+}
+.textosomos.activo {
+    display: block;
+}
+.cabeceratexto {
+    position: absolute;
+    top: 200px;
+    right: 40px;
+}
+.caja.activo i {
+    color:var(--magenta);
+}
+/* FIN SOMOS */
+/* NOTICIAS */
+
+.noticias {
+    position: relative;
+}
+.fondonoticias {
+    width: 100%;
+    height: 30vh;
+    background-color: var(--magentaclaro);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+.titulo {
+    position: absolute;
+    top: -77px;
+    right: 160px;
+}
+.titulo h1 {
+    color: black;
+    text-align: end;
+}
+.col {
+    margin-top: 40px;
+    width: 35%;
+    overflow: hidden;
+    flex: 1;
+    transition: 1s;
+}
+.col:not(:last-child) {
+    margin-right: 20px;
+}
+.col img {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    display: block;
+    transition: 1s;
+}
+.col img:hover {
+    transform: scale(1.1);
+}
+.texto {
+    background-color: var(--amarillo);
+    padding: 50px 30px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.texto:hover {
+    background-color: black;
+}
+.texto:hover * {
+    color: var(--amarillo);
+}
+.texto:hover div:last-child {
+    border: 1px solid var(--amarillo);
+}
+.btn.todas {
+    background-color: black;
+    display: block;
+    width: 12%;
+    text-align: center;
+}
+.btn.todas a {
+    color: white;
+    font-size: 24px;
+}
+.btn.todas a:hover {
+    color: var(--amarillo);
+    font-style: italic;
+}
+/* FIN NOTICIAS */
+section.videoclips {
+    background-color: black;
+    padding: 100px;
+}
+.videoclips div:first-child {
+    margin-bottom: 100px;
+}
+/* BRAND */
+.brand {
+    margin-top: 150px;
+}
+.textoservicios h1 {
+    text-align: end;
+    position: relative;
+    top: 50px;
+    z-index: -10;
+}
+.brand p {
+    text-align: right;
+}
+.servicios {
+    margin-top: 70px;
+}
+.cajabr {
+    padding: 20px;
+    position: relative;
+    transform-origin: bottom;
+    transition: 1s;
+    transition-property: background-color, transform;
+    transition-duration: 1s, 1s;
+    transition-delay: 0s, 0s;
+    width: 15%;
+}
+.aside, .bside {
+    backface-visibility: hidden;
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: black;
+    padding-left: 20px;
+    border-radius: 500px;
+    width: 70%;
+}
+.aside div h1, .bside div h1 {
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: var(--magenta);
+}
+.bside div h1 {
+    color: var(--amarillo);
+}
+.aside {
+    z-index: 10;
+}
+.bside {
+    transform: rotateY(180deg);
+    transition: 0.5s;
+}
+.cajabr:hover .aside {
+    transform: rotateY(180deg);
+}
+.cajabr:hover .bside {
+    transform: rotateY(360deg);
+}
+.marcas {
+    width: 100%;
+    margin-top: 200px;
+}
+.marcas img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+/* FIN DE BRAND */
+
+/* FOOTER */
+.formulario img {
+    width: 10%;
+}
+.formulario form {
+    margin-top: 80px;
+    font-size: 24px;
+}
+.formulario h1 {
+    text-align: right;
+}
+.formulario input {
+    margin-right: 20px;
+}
+::placeholder {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+.formulario .btn {
+    background-color: var(--magenta);
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    border-radius: 50px;
+    transition: 1s;
+}
+.formulario .btn a {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+.formulario .btn:hover a {
+    color: black;
+}
+.formulario .btn:hover {
+    background-color: var(--amarillo);
+}
+footer .redes {
+    text-align: center;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+footer .redes a i {
+    font-size: 28px;
+    color: white;
+
+}
+footer .redes a:not(:last-child) {
+    margin-right: 10px;
+}
+footer .redes a i:hover {
+    color: var(--amarillo);
+}
+.aviso {
+    margin: 130px 200px;
+}
+.aviso li {
+    font-size: 20px;
+    font-weight: 700; 
+}
+.aviso li:hover {
+    color: var(--amarillo);
+}
+/* FIN DE FOOTER */
+/* ARTISTAS */
+section.mgmt {
+    background-color: black;
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+.textoartistas {
+    width: 60%;
+    padding: 20px;
+}
+.textoartistas .fondonoticias {
+    background-color: #961556;
+    top: 20px;
+    left: 260px;
+    height: 45vh;
+}
+.textoartistas p {
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.galeria {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.tituloart {
+    padding-left: 30px;
+}
+.cuadrado {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.cuadrado img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: 1.5s;
+    filter: grayscale(1);
+}
+.nombre {
+    background-color: #e5d30887;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.nombre p {
+    font-size: 50px;
+    font-weight: 900;
+}
+.nombre:hover {
+    background-color: black;
+    opacity: 70%;
+}
+.nombre p:hover {
+    color: var(--amarillo);
+}
+.cuadrado img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+/* FIN ARTISTAS */
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .menulateral ul a {
+        font-size: 70px;
+        line-height: 65px;
+    }
+@media (max-width: 1100px) {
+    .menulateral ul a {
+        font-size: 70px;
+        line-height: 65px;
+    }
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+    form {
+        display: block
+    }
+    .formulario input {
+        margin-right: 0;
+    }
+    .formulario div img {
+        width: 20%;
+        height: 20%;
+    }
+    input, select, textarea {
+        width: 100%;
+    }
+    .aviso {
+        margin: 140px 200px;
+    }
+    .aviso ul {
+        display: block;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .aviso ul li {
+        font-size: 16px;
+    }
+    .servicios {
+        margin-left: 120px;
+    }
+}
+@media (max-width: 1000px) {
+    .menulateral ul li a {
+        font-size: 65px;
+        letter-spacing: -2px;
+        line-height: 50px;
+        }
+}
+@media (max-width: 950px) {
+    .menufijo {
+        width: 11%;
+    }
+    .navbar ul li img {
+        width: 100%;
+    }
+    .navbar ul li a {
+        font-size: 28px;
+    }
+    .menulateral {
+        width: 89%;
+        margin-left: 4%;
+        margin-top: 10%;
+    }
+    .menulateral > div {
+    display: block;
+    }
+    .menulateral ul li a {
+    font-size: 65px;
+    letter-spacing: -2px;
+    line-height: 50px;
+    }
+    .iconos {
+        margin-bottom: 30px;
+        bottom: 0;
+        margin-top: 70px;
+    }
+    .iconos .caja i {
+        font-size: 70px;
+    }
+    .textosomos h1 {
+        font-size: 70px;
+        letter-spacing: -6px;
+        line-height: 40px;
+        top: 18px;
+        left: 0;
+    }
+    .textosomos p, .brand div p {
+        font-size: 24px;
+        line-height: 34px;
+        text-align: left;
+    }
+    .redes {
+        flex-direction: row;
+        margin-top: 150px;
+    }
+    .redes i {
+        font-size: 34px;
+        margin-right: 12px;
+        color: var(--amarillo);
+    }
+    .redes .btn {
+        width: 30%;
+    }
+    .redes .btn a {
+        font-size: 16px;
+    }
+    .columnas {
+        display: block;
+    }
+    .col {
+        width: 100%;
+    }
+    .videos {
+        display: block;
+    }
+    .videos iframe {
+        width: 100%;
+    }
+    .servicios {
+        flex-direction: column;
+        margin-left: 120px;
+    }
+    .cajabr {
+        width: 50%;
+        margin-bottom: 100px;
+        justify-content: center;
+    }
+    .aside div h1, .bside div h1 {
+        font-size: 40px;
+    }
+    form {
+        display: block
+    }
+    .formulario input {
+        margin-right: 0;
+    }
+    .formulario div img {
+        width: 20%;
+        height: 20%;
+    }
+    input, select, textarea {
+        width: 100%;
+    }
+    .aviso {
+        margin: 140px 200px;
+    }
+    .aviso ul {
+        display: block;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .aviso ul li {
+        font-size: 16px;
+    }
+    .galeria .fila {
+        display: block;
+    }
+    .cuadrado {
+        width: 100%;
+    }
+}
+@media (max-width: 870px) {
+    body {
+        padding-left: 0;
+    }
+    .menufijo {
+        display: none;
+    }
+    .menuresponsive {
+        display: block;
+    }
+    .menulateral {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+        margin-top: 17%;
+        padding-bottom: 10px;
+    }
+    .menulateral > div {
+        display: block;
+    }
+    .menulateral ul li a {
+        font-size: 46px;
+        letter-spacing: -2px;
+        line-height: 32px;
+    }
+    .redes {
+        flex-direction: row;
+        margin-top: 40px;
+        padding-top: 10px;
+    }
+    .redes a {
+        padding-top: 10px;
+    }
+    .redes i {
+        font-size: 28px;
+        margin-right: 12px;
+        color: var(--amarillo);
+    }
+    .redes .btn {
+        width: 35%;
+    }
+    .redes .btn a {
+        font-size: 16px;
+    }
+    .margenes {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .barratop {
+        width: 100%;
+        background-color: black;
+    }
+    .logo img {
+        padding: 5px;
+    }
+    button.hamburger {
+        width: 20%;
+    }
+    .cabeceratexto {
+        display: none;
+    }
+    .cabeceratexto.dos {
+        display: block;
+    }
+    .letras {
+        width: 100%;
+        left: 62px;
+        top: 50px;
+    }
+    .letras img {
+        width: 80%;
+    }
+    .letras h1 {
+        font-size: 100px;
+    }
+    .iconos {
+        margin-bottom: 30px;
+        bottom: 0;
+        margin-top: 70px;
+    }
+    .iconos .caja i {
+        font-size: 70px;
+    }
+    .textosomos h1 {
+        font-size: 50px;
+        letter-spacing: -6px;
+        line-height: 40px;
+        top: 0;
+        left: 0;
+    }
+    .textosomos p, .brand div p {
+        font-size: 24px;
+        line-height: 34px;
+        text-align: left;
+    }
+    .noticias {
+        margin-top: 10px ;
+    }
+    .noticias h1, .brand h1 {
+        font-size: 75px;
+    }
+    .columnas {
+        display: block;
+    }
+    .col {
+        width: 100%;
+    }
+    .fondonoticias {
+        height: 100%;
+    }
+    .formulario div h1 {
+        font-size: 50px;
+        letter-spacing: -2px;
+    }
+    .aviso {
+        margin: 0;
+    }
+    .titulo {
+        right: 44px;
+        top: -98px;
+    }
+    section.videoclips {
+        padding: 0;
+        padding: 20px 30px;
+    }
+    .videos {
+        margin-top: 50px;
+    }
+    .videos iframe {
+        margin-bottom: 50px;
+    }
+    .videos:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    iframe {
+        width: 100%;
+        height: 50%;
+    }
+    .videoclips div {
+        display: block;
+    }
+    .videoclips h1 {
+        font-size: 80px;
+        padding-left: 20px;
+    }
+    .servicios {
+        flex-direction: column;
+        margin-left: 120px;
+    }
+    .marcas {
+        margin-top: 50px;
+    }
+    .cajabr {
+        width: 50%;
+        margin-bottom: 100px;
+        justify-content: center;
+    }
+    .aside div h1, .bside div h1 {
+        font-size: 40px;
+    }
+    .formulario div img {
+        width: 30%;
+        height: 30%;
+    }
+    footer {
+        padding-top: 30px;
+    }
+    form {
+        display: block
+    }
+    .formulario input {
+        margin-right: 0;
+    }
+    input, select, textarea {
+        width: 100%;
+    }
+    .fila {
+        display: block;
+    }
+    .cuadrado {
+        width: 100%;
+        margin-bottom: 30px;
+        height: 200px;
+    }
+    .cuadrado img {
+        height: 200px;
+    }
+    .nombre {
+        padding: 10px;
+    }
+    .nombre p {
+        font-size: 34px;
+    }
+    section.mgmt {
+        padding-top: 0;
+    }
+    .textoartistas .fondonoticias {
+       left: 110px;
+       height: 117vh;
+    }
+    .textoartistas {
+        width: 100%;
+    }
+    .textoartistas p {
+        font-size: 40px;
+    }
+    .aviso {
+        padding-top: 50px;
+    }
+    .aviso ul {
+        display: block;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    .aviso ul li {
+        font-size: 16px;
+    }
+}
+
+

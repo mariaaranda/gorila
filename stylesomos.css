@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+body {
+    padding-left: 7%;
+}
+h1 {
+    color: var(--amarillo);
+    font-size: 100px;
+    letter-spacing: -8px;
+    font-weight: 900;
+    line-height: 125px;
+}
+.flex {
+    display: flex;
+}
+.wrapper {
+    max-width: 80%;
+    margin: auto;
+}
+:root {
+    --magenta: #c61a70;
+    --amarillo: #e5d308;
+    --amarilloclaro: #dca932;
+    --magentaclaro: #b38b9f70;
+    --gris: #9595955c;
+}
+.somos {
+    margin-top: 300px
+}
+.iconos {
+    position: absolute;
+    top: 0;
+    margin-top: 100px;
+}
+.iconos i {
+    font-size: 110px;
+    cursor: pointer;
+}
+.iconos .caja i:not(:last-child) {
+    margin-right: 30px;
+}
+.iconos i:hover {
+    color:var(--magenta);
+}
+.infosomos {    
+    width: 100%;
+    position: relative;
+}
+.infosomos p {
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.infosomos h1 {
+    font-size: 100px;
+    letter-spacing: -8px;
+    position: absolute;
+    z-index: -10;
+    top: -78px;
+    left: -3px;
+}
+.infosomos h1:hover {
+    color: var(--magenta);
+}
+.cajasomos {
+    position: absolute;
+    top: 0;
+}
+.textosomos {
+    display: none;
+}
+.textosomos.activo {
+    display: block;
+}
+.cabeceratexto {
+    position: absolute;
+    top: 200px;
+    right: 40px;
+}
+.caja.activo i {
+    color:var(--magenta);
+}
